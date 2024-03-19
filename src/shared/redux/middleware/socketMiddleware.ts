@@ -2,6 +2,10 @@ import { Middleware } from "redux";
 import { receiveStream } from "../features/home/homeSlice";
 import { RootState } from "../store";
 import { receiveSymbolStream } from "../features/symbol/symbolSlice";
+import btcusdtDepth from "@/shared/dummyData/btcusdtDepth";
+import btcusdtKLine from "@/shared/dummyData/btcusdtKLine";
+import btcusdtTicker from "@/shared/dummyData/btcusdtTicker";
+import tickers from "@/shared/dummyData/tickers";
 
 
 const socketMiddleware: Middleware<
@@ -34,6 +38,12 @@ const socketMiddleware: Middleware<
         }
 
         socket.onerror = error => {
+          setTimeout(() => {
+            [btcusdtDepth, btcusdtKLine, btcusdtTicker, tickers].forEach(data => {
+              storeApi.dispatch(receiveStream(JSON.stringify(data)))
+              storeApi.dispatch(receiveSymbolStream(JSON.stringify(data)))
+            })
+          }, 5000)
           if (error.type == 'ECONNREFUSED') {
             socket = connectToWSS()
             return
@@ -44,6 +54,7 @@ const socketMiddleware: Middleware<
         socket.onmessage = event => {
           // Dispatch action for received message
           const message = event.data.toString()
+          // console.log(message)
           storeApi.dispatch(receiveStream(message))
           storeApi.dispatch(receiveSymbolStream(message))
         }
@@ -75,6 +86,16 @@ const socketMiddleware: Middleware<
       switch (action.type) {
     
         case 'symbol/initialize/pending':
+          if (socket?.readyState != 1) {
+            // Means cant connect to socket
+            setTimeout(() => {
+              [btcusdtDepth, btcusdtKLine, btcusdtTicker, tickers].forEach(data => {
+                storeApi.dispatch(receiveStream(JSON.stringify(data)))
+                storeApi.dispatch(receiveSymbolStream(JSON.stringify(data)))
+              })
+            }, 3000)
+          }
+          // Ensure to unsubscribe from previous symbol stream
           if (prevSymbol && prevInterval) {
             sendSocketEvent(JSON.stringify({
               "method": "UNSUBSCRIBE",
@@ -86,6 +107,7 @@ const socketMiddleware: Middleware<
               "id": 2
             }))
           }
+          // Subscribe to new symbol stream
           sendSocketEvent(JSON.stringify({
             "method": "SUBSCRIBE",
             "params": [

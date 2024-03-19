@@ -225,7 +225,7 @@ const SymbolDetail = () => {
                         </Stack>
                         <Stack direction="row" justifyContent="space-between">
                             <Typography>Market Dominance Index</Typography>
-                            <Typography fontWeight="bold">{symbolDetail?.marketDominanceIndex.toLocaleString(undefined, { maximumFractionDigits: 0 })}%</Typography>
+                            <Typography fontWeight="bold">{symbolDetail?.marketDominanceIndex?.toLocaleString(undefined, { maximumFractionDigits: 0 })}%</Typography>
                         </Stack>
                         <Stack direction="row" justifyContent="space-between">
                             <Typography>Circulating Supply</Typography>

@@ -1,5 +1,5 @@
 import { Apple, Google } from "@mui/icons-material";
-import { Button, Divider, Grid, Link, Stack, TextField, Typography } from "@mui/material";
+import { Button, Grid, Link, Stack, TextField, Typography } from "@mui/material";
 
 export default function Login() {
     return (

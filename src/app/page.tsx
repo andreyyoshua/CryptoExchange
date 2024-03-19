@@ -181,7 +181,7 @@ const AllTickers = () => {
 
                   head.id == 'price' ? 
                   <Typography style={{
-                    color: ticker.isLastPriceIncreased == true ? "green" : ticker.isLastPriceIncreased == false ? "red" : "black"
+                    color: ticker.isLastPriceIncreased == true ? "green" : ticker.isLastPriceIncreased == false ? "red" : undefined
                   }}>
                     ${ticker.lastPrice.toLocaleString(undefined, {maximumFractionDigits: 2})}
                   </Typography> :
@@ -189,12 +189,12 @@ const AllTickers = () => {
                   head.id == '24hChange' ? 
                   <Stack direction="row" spacing={2} justifyContent="end">
                     <Typography style={{
-                      color: ticker.priceChange > 0 ? "green" : ticker.priceChange < 0 ? "red" : "black"
+                      color: ticker.priceChange > 0 ? "green" : ticker.priceChange < 0 ? "red" : undefined
                     }}>
                       {ticker.priceChange.toLocaleString(undefined, {maximumFractionDigits: 2})}
                     </Typography>
                     <Typography style={{
-                      color: ticker.priceChangePercentage > 0 ? "green" : ticker.priceChangePercentage < 0 ? "red" : "black"
+                      color: ticker.priceChangePercentage > 0 ? "green" : ticker.priceChangePercentage < 0 ? "red" : undefined
                     }}>
                       {ticker.priceChangePercentage.toLocaleString(undefined, {maximumFractionDigits: 2})}%
                     </Typography>
