@@ -20,8 +20,9 @@ Demo available [here](http://staging.biissa.com:3000)
 - **WebSocket**: Protocol for real-time communication between client and server.
 - **React**: JavaScript library for building user interfaces.
 - **Node.js**: JavaScript runtime environment for server-side development.
-- **Material UI https://mui.com/**: Components.
+- **[Material UI](https://mui.com/)**: Components.
 - **Redux**: State Managements
+- **[ApexCharts](https://apexcharts.com/)**: Charting Library
 - **Docker**: For better development (Optional)
 
 ## Installation
