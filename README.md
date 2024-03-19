@@ -63,8 +63,8 @@ For any inquiries or feedback, please contact andrey.yoshua@gmail.com
 
 ## Screenshots
 <div align="center">
-  <img alt="Screenshot 2024-03-18 at 21 21 27" src="https://github.com/andreyyoshua/CryptoExchange/assets/17944191/770b95d3-173d-444f-8c64-0b36249c188d" width="45%">
-  <img alt="Screenshot 2024-03-18 at 21 20 58" src="https://github.com/andreyyoshua/CryptoExchange/assets/17944191/7aee03d7-edc9-4d3f-8890-a0df9478ce4b" width="45%">
+  <img alt="Screenshot 2024-03-18 at 21 21 27" src="https://github.com/andreyyoshua/CryptoExchange/assets/17944191/f481989d-ebdc-41db-af74-edc92d46f6a0" width="45%">
+  <img alt="Screenshot 2024-03-18 at 21 20 58" src="https://github.com/andreyyoshua/CryptoExchange/assets/17944191/f597cab7-e0e7-4cf8-b512-e2093796cd7b" width="45%">
 </div>
 
 
