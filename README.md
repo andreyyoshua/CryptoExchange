@@ -1,6 +1,6 @@
 # Cryptocurrency Exchange Web Page
 
-This project is a cryptocurrency exchange web page built using Next.js with WebSocket connection. It provides real-time updates of cryptocurrency prices.
+This project is a cryptocurrency exchange web page built using Next.js with WebSocket connection. It provides real-time updates of cryptocurrency prices (Provided by [Binance](https://github.com/binance/binance-spot-api-docs). If your region blocked Binance, please use VPN, otherwise you will get dummy data)
 
 ## Features
 
