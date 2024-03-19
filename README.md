@@ -4,6 +4,8 @@ This project is a cryptocurrency exchange web page built using Next.js with WebS
 
 Data is provided by [Binance](https://github.com/binance/binance-spot-api-docs). If your region blocked Binance, please use VPN, otherwise you will get dummy data
 
+Demo available [here](http://staging.biissa.com:3000)
+
 ## Features
 
 - Real-time updates of cryptocurrency prices using WebSocket connection.
