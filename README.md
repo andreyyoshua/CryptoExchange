@@ -1,6 +1,8 @@
 # Cryptocurrency Exchange Web Page
 
-This project is a cryptocurrency exchange web page built using Next.js with WebSocket connection. It provides real-time updates of cryptocurrency prices (Provided by [Binance](https://github.com/binance/binance-spot-api-docs). If your region blocked Binance, please use VPN, otherwise you will get dummy data)
+This project is a cryptocurrency exchange web page built using Next.js with WebSocket connection. It provides real-time updates of cryptocurrency prices 
+
+Data is provided by [Binance](https://github.com/binance/binance-spot-api-docs). If your region blocked Binance, please use VPN, otherwise you will get dummy data
 
 ## Features
 
@@ -35,7 +37,7 @@ This project is a cryptocurrency exchange web page built using Next.js with WebS
    ```
 
 3. Configure environment variables:
-   Adjust .env.dev file in the root directory and add the necessary environment variables, including database connection strings, API keys, etc (f needed)
+   Adjust .env.local file in the root directory and add the necessary environment variables, including database connection strings, API keys, etc (f needed)
 
 4. Run the Project
    ```bash
