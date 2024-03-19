@@ -19,6 +19,7 @@ Data is provided by [Binance](https://github.com/binance/binance-spot-api-docs).
 - **React**: JavaScript library for building user interfaces.
 - **Node.js**: JavaScript runtime environment for server-side development.
 - **Material UI https://mui.com/**: Components.
+- **Redux**: State Managements
 - **Docker**: For better development (Optional)
 
 ## Installation
