@@ -29,7 +29,7 @@ const socketMiddleware: Middleware<
     const autoReconnectDelay = 5000
 
     const connectToWSS = (): WebSocket => {
-        socket = new WebSocket("wss://stream.binance.com:9443/ws")
+        socket = new WebSocket(`ws://${process.env.NEXT_PUBLIC_WS_BASE_URL}:8080`)
         socket.onclose = event => {
           setTimeout(() => {
             socket = connectToWSS()

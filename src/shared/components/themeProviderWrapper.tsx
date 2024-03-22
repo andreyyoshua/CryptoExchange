@@ -31,7 +31,7 @@ export default function ThemeProviderWrapper(props: { children: React.ReactNode 
                             variant="h6"
                             component="div"
                             sx={{ flexGrow: 1}}>
-                            Pintu Exchange
+                            Crypto Exchange
                         </Typography>
                         <Box>
                             {navItems.map((item) => (
